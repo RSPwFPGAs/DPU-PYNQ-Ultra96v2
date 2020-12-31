@@ -11,7 +11,7 @@ on the Ultra96 v2 board.
 We have the following assumptions:
 
 1. As a starting point, we assume you have flashed your SD card with 
-Ultra96v2 image v2.5. 
+[Ultra96v2 image v2.5](http://avnet.me/ultra96v2-pynq-image-v2.5). 
 2. You can boot up the board without any issue. It is 
 recommended for you to use bigger power bricks; for example, I am using a 
 [4A power brick](https://www.avnet.com/shop/us/products/avid-technologies/90152-2208-3074457345635740760/).
