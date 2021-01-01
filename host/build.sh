@@ -49,7 +49,7 @@ make clean; make KERNEL=DPU DEVICE=Ultra96
 
 # make a folder and store overlay files
 # dpu.bit, dpu.hwh, and dpu.xclbin will be put under $CURDIR/dpu_overlay
-if [ ! -d "dpu_overlay" ]; then
+if [ ! -d "$CURDIR/dpu_overlay" ]; then
 	mkdir $CURDIR/dpu_overlay
 fi
 cp -f binary_container_1/link/vivado/vpl/prj/prj.srcs/sources_1/bd/*/hw_handoff/*.hwh \
@@ -58,6 +58,8 @@ cp -f binary_container_1/link/vivado/vpl/prj/prj.runs/impl_1/*.bit \
 	$CURDIR/dpu_overlay/dpu.bit
 cp -f binary_container_1/*.xclbin \
     $CURDIR/dpu_overlay/dpu.xclbin
+
+cd ../../../../
 
 echo ""
 echo "Built PYNQ DPU design successfully."
