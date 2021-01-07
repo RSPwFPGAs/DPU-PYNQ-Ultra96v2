@@ -176,7 +176,7 @@ mkdir pynq-dpu
 Put the following files in this `pynq-dpu` folder:
 
 1. The overlay files in [dpu_overlay](./host/dpu_overlay)(`dpu.bit`, `dpu.hwh`, `dpu.xclbin`).
-2. The Python file in [app](./host/app)(`dpu.py`).
+2. The Python file in [app](./app)(`dpu.py`).
 3. Any DPU model that you have compiled in Step 3 (e.g. `dpu_resnet50_0.elf`).
 
 After that, you can create a new Jupyter notebook file in the same folder; 
