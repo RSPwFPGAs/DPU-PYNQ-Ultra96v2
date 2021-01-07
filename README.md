@@ -71,7 +71,7 @@ For example:
 ./upgrade.sh pynq=0
 ```
 
-## Step 2: Build Hardware Design on Host
+## Step 2 (Optional): Build Hardware Design on Host
 
 While your board is being upgraded, we can take a look at the hardware design.
 
@@ -99,14 +99,14 @@ smaller DPU's on this platform.
 
 After the building process is done, you should see some messages indicating the 
 building is successful. 3 overlay files will be copied to the folder
-`dpu_overlay`: `dpu.hwh`, `dpu.bit`, and `dpu.xclbin`.
+[dpu_overlay](./host/dpu_overlay): `dpu.hwh`, `dpu.bit`, and `dpu.xclbin`.
 Now you have the DPU overlay files which can work with PYNQ! 
 Keep those 3 files in good hands.
 
 **Note**: As long as we have those 3 files, we are done; please do NOT
 replace PYNQ SD card content!
 
-## Step 3 (Optional): Build DPU Models on Host
+## Step 3: Build DPU Models on Host
 
 **On your host machine**, go to your `host` folder. If you have already run
 the `build.sh` in the previous step, you should be able to see (1) a Vitis AI 
@@ -175,8 +175,8 @@ mkdir pynq-dpu
 
 Put the following files in this `pynq-dpu` folder:
 
-1. The overlay files (`dpu.bit`, `dpu.hwh`, `dpu.xclbin`)
-2. The Python file `app/dpu.py`.
+1. The overlay files in [dpu_overlay](./host/dpu_overlay)(`dpu.bit`, `dpu.hwh`, `dpu.xclbin`).
+2. The Python file in [app](./host/app)(`dpu.py`).
 3. Any DPU model that you have compiled in Step 3 (e.g. `dpu_resnet50_0.elf`).
 
 After that, you can create a new Jupyter notebook file in the same folder; 
